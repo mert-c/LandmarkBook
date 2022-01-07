@@ -13,7 +13,7 @@
 		6199890027873FD4002D5973 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 619988FE27873FD4002D5973 /* Main.storyboard */; };
 		6199890227873FD5002D5973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6199890127873FD5002D5973 /* Assets.xcassets */; };
 		6199890527873FD5002D5973 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6199890327873FD5002D5973 /* LaunchScreen.storyboard */; };
-		6199890D278744D3002D5973 /* imageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6199890C278744D3002D5973 /* imageViewController.swift */; };
+		6199890D278744D3002D5973 /* landmarkBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6199890C278744D3002D5973 /* landmarkBookView.swift */; };
 		61998911278765D8002D5973 /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61998910278765D8002D5973 /* MyCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +26,7 @@
 		6199890127873FD5002D5973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6199890427873FD5002D5973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6199890627873FD5002D5973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6199890C278744D3002D5973 /* imageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imageViewController.swift; sourceTree = "<group>"; };
+		6199890C278744D3002D5973 /* landmarkBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = landmarkBookView.swift; sourceTree = "<group>"; };
 		61998910278765D8002D5973 /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +68,7 @@
 				6199890127873FD5002D5973 /* Assets.xcassets */,
 				6199890327873FD5002D5973 /* LaunchScreen.storyboard */,
 				6199890627873FD5002D5973 /* Info.plist */,
-				6199890C278744D3002D5973 /* imageViewController.swift */,
+				6199890C278744D3002D5973 /* landmarkBookView.swift */,
 			);
 			path = LandmarkBook;
 			sourceTree = "<group>";
@@ -147,7 +147,7 @@
 				619988FD27873FD4002D5973 /* ViewController.swift in Sources */,
 				61998911278765D8002D5973 /* MyCollectionViewCell.swift in Sources */,
 				619988F927873FD4002D5973 /* AppDelegate.swift in Sources */,
-				6199890D278744D3002D5973 /* imageViewController.swift in Sources */,
+				6199890D278744D3002D5973 /* landmarkBookView.swift in Sources */,
 				619988FB27873FD4002D5973 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
