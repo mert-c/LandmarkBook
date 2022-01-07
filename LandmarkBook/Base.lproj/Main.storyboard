@@ -1,24 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LandmarkBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="center" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" indicatorStyle="black" bouncesZoom="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mez-LE-KJN">
+                                <rect key="frame" x="0.0" y="102" width="414" height="760"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="BKd-eM-iv9">
+                                    <size key="itemSize" width="350" height="54"/>
+                                    <size key="headerReferenceSize" width="130" height="30"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" reuseIdentifier="textCell" translatesAutoresizingMaskIntoConstraints="NO" id="9Ah-aM-W2S" customClass="MyCollectionViewCell" customModule="LandmarkBook" customModuleProvider="target">
+                                        <rect key="frame" x="32" y="38" width="350" height="54"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hbr-ky-Koa" customClass="cellLabelCollectionViewCell" customModule="LandmarkBook" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="54"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0W-zc-IGc">
+                                                    <rect key="frame" x="31" y="14" width="293" height="26"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="31" id="V5J-Xj-0hn"/>
+                                                        <constraint firstAttribute="width" constant="293" id="ojN-Jv-IKB"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="P0W-zc-IGc" secondAttribute="trailing" constant="26" id="3F2-dL-9pR"/>
+                                                <constraint firstItem="P0W-zc-IGc" firstAttribute="leading" secondItem="hbr-ky-Koa" secondAttribute="leading" constant="31" id="Et5-g0-Wxf"/>
+                                                <constraint firstAttribute="bottom" secondItem="P0W-zc-IGc" secondAttribute="bottom" constant="5" id="TER-FL-7q2"/>
+                                                <constraint firstItem="P0W-zc-IGc" firstAttribute="top" secondItem="hbr-ky-Koa" secondAttribute="top" constant="5" id="qeD-KH-H1d"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="350" height="54"/>
+                                        <connections>
+                                            <outlet property="mylabel" destination="P0W-zc-IGc" id="dbJ-fd-FU7"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aqP-1c-tSE">
+                                    <rect key="frame" x="0.0" y="8" width="414" height="30"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Landmark Book" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q93-q6-Nyb">
+                                <rect key="frame" x="108" y="44" width="203" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" name="AccentColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mez-LE-KJN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6iR-ez-fWw"/>
+                            <constraint firstItem="mez-LE-KJN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XTM-EX-WMB"/>
+                            <constraint firstItem="mez-LE-KJN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="saZ-Qv-urM"/>
+                            <constraint firstItem="mez-LE-KJN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tZd-VV-QLy"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Vzt-r0-Ycy"/>
+                    <connections>
+                        <outlet property="collectionView" destination="mez-LE-KJN" id="x5L-uv-PyB"/>
+                        <segue destination="cp5-0l-JcV" kind="show" identifier="toLandmarkBook" id="RaQ-da-126"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1849.2753623188407" y="69.642857142857139"/>
+        </scene>
+        <!--LandmarkBook-->
+        <scene sceneID="6Y8-ai-blf">
+            <objects>
+                <viewController title="LandmarkBook" id="cp5-0l-JcV" customClass="imageViewController" customModule="LandmarkBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="center" id="BGp-j0-MU9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fcn-6r-P9H">
+                                <rect key="frame" x="36" y="112" width="353" height="216"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mKg-hn-RUL">
+                                <rect key="frame" x="36" y="336" width="343" height="98"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="S6V-9R-V8O">
+                                <rect key="frame" x="123" y="419" width="169" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title=" Learn More!">
+                                    <imageReference key="image" image="book.fill" catalog="system" symbolScale="default"/>
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="btn:" destination="cgE-wy-A2D" eventType="touchUpInside" id="Jed-Id-ECx"/>
+                                    <action selector="btnweb:" destination="cp5-0l-JcV" eventType="touchUpInside" id="mGl-kY-Ch0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2VE-Lv-hV4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="tintColor" name="AccentColor"/>
+                        <constraints>
+                            <constraint firstItem="fcn-6r-P9H" firstAttribute="top" secondItem="2VE-Lv-hV4" secondAttribute="top" constant="56" id="5KO-bZ-sCz"/>
+                            <constraint firstItem="mKg-hn-RUL" firstAttribute="top" secondItem="fcn-6r-P9H" secondAttribute="bottom" constant="8" id="FpY-0v-IcJ"/>
+                            <constraint firstItem="fcn-6r-P9H" firstAttribute="leading" secondItem="mKg-hn-RUL" secondAttribute="leading" id="fpi-Xv-q1L"/>
+                            <constraint firstItem="2VE-Lv-hV4" firstAttribute="trailing" secondItem="fcn-6r-P9H" secondAttribute="trailing" constant="25" id="waU-2g-FgJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="LandmarkBook" id="Kl4-20-qtq">
+                        <barButtonItem key="backBarButtonItem" title="Landmarks" id="6Z9-5D-Ohj"/>
+                        <connections>
+                            <outlet property="titleView" destination="fcn-6r-P9H" id="NUU-iU-MfS"/>
+                        </connections>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="imageLabel" destination="mKg-hn-RUL" id="w2R-85-WSC"/>
+                        <outlet property="imageView" destination="fcn-6r-P9H" id="Eoc-l4-IEQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HAx-7y-jS3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="cgE-wy-A2D" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2598.5507246376815" y="72.991071428571431"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="book.fill" catalog="system" width="128" height="95"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
